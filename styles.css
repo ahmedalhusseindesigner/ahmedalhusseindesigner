@@ -1,0 +1,467 @@
+/* CSS Document */
+/* author: Ahmed AlHussein */
+/* date: 2025-4-012 */
+
+/* Animated CSS */
+@keyframes flipInX {
+    0% {
+      transform: perspective(400px) rotateX(90deg);
+      opacity: 0;
+    }
+    40% {
+      transform: perspective(400px) rotateX(-10deg);
+    }
+    70% {
+      transform: perspective(400px) rotateX(10deg);
+    }
+    100% {
+      transform: perspective(400px) rotateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .flip-in-x {
+    animation: flipInX 1.3s ease both;
+  }
+
+
+/*fonts*/
+@font-face {
+    font-family: 'MedadPronz';
+    src: url('./assets/fonts/MedadPronz-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Alexandria';
+    src: url('./assets/fonts/Alexandria-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'IBMPlexSansArabic';
+    src: url('./assets/fonts/IBMPlexSansArabic-Regular.ttf') format('truetype');
+}
+
+/** CSS Reset */
+
+::placeholder {
+    color: #090a0e;
+    opacity: 1; /* Firefox */
+  }
+
+body {
+    direction: rtl;
+    background-color: #090a0e;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#hero {
+    width: 100%;
+    background-image: url('./assets/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 8%;
+}
+
+.lang{
+    position: absolute;
+    left: 40px;
+    top: 15px;
+    font-family: 'Alexandria', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    font-style: normal;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-txt {
+    position: relative;
+    top: 60%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.h1-wrapper {
+    display: inline-block;
+    perspective: 800px; /* تتحكم في عمق الدوران */
+    overflow: hidden;
+  }
+
+.h1-wrapper h1 {
+    font-family: 'MedadPronz', sans-serif;
+    font-size: 8vw;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.hero-txt p {
+    font-family: 'MedadPronz', sans-serif;
+    font-size: 2vw;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 15% 100px 15%;
+}
+
+.content h2 {
+    font-family: 'IBMPlexSansArabic', sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #fff;
+    text-align: right;
+    margin: 0px;
+}
+
+.content p {
+    font-family: 'IBMPlexSansArabic', sans-serif;
+    font-size: 1.5vw;
+    font-weight: normal;
+    color: #fff;
+    text-align: right;
+    margin: 0px;
+}
+
+.spotify-div {
+    width: 75%;
+    height: auto;
+    margin: auto;
+}
+
+.spotify-div h2{
+    font-family: 'cairo', sans-serif;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #fff;
+    text-align: right;
+    margin: 10px 0px;
+}
+
+.MyPreviousDesigns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 100px;
+}
+
+.MyPreviousDesigns h2 {
+    font-family: 'cairo', sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: 40px 0px 60px 0px;
+}
+
+.designs {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.card {
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.myBehance {
+    width: 12%;
+    min-width: 180px;
+    margin-top: 40px;
+}
+
+.see-more-btn {
+    width: 12%;
+    min-width: 250px;
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #1d70fa;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-family: 'cairo', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.see-more-btn img {
+    width: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.contact h2 {
+    font-family: 'cairo', sans-serif;
+    font-size: 3vw;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+}
+
+.contact p {
+    font-family: 'cairo', sans-serif;
+    font-size: 1.5vw;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.mysocials{
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.socials a {
+    width: 48px;
+}
+
+
+form {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 8px;
+}
+input[type="email"], input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    margin: 10px 0;
+    background-color: #fff;
+    color: #090a0e;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-family: 'IBMPlexSansArabic', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    padding: 6px;
+    margin: 10px 0;
+    background-color: #fff;
+    color: #090a0e;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-family: 'IBMPlexSansArabic', sans-serif;
+}
+
+input:focus-visible ,textarea:focus-visible {
+    outline: none;
+    border-color: #ffe8c4;
+}
+
+form button {
+    width: 30%;
+    min-width: 240px;
+    padding: 4px;
+    margin: 10px 0;
+    background-color: #fff;
+    color: #090a0e;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-family: 'cairo', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: end;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    width: 5%;
+    margin: 10px;
+}
+
+footer p {
+    font-family: 'IBMPlexSansArabic', sans-serif;
+    font-size: 1vw;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .designs {
+        width: 100%;
+    }
+
+    
+
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 12%;
+    }
+
+    .content {
+        padding: 50px 5% 50px 5%;
+    }
+
+    .content h2 {
+        font-size: 3vw;
+    }
+
+    .content p {
+        font-size: 2.5vw;
+    }
+
+    .spotify-div {
+        width: 95%;
+        height: 160px;
+    }
+
+    .spotify-div h2{
+        font-size: 3vw;
+    }
+
+    .MyPreviousDesigns {
+        padding: 20px;
+    }
+
+    .MyPreviousDesigns h2 {
+        font-size: 5vw;
+        margin-bottom: 40px;
+    }
+
+    .contact h2 {
+        font-size: 5vw;
+    }
+
+    .contact p {
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-txt h1 {
+        font-size: 10vw;
+    }
+
+    .hero-txt p {
+        font-size: 4vw;
+    }
+
+    .content h2 {
+        font-size: 5vw;
+    }
+
+    .content p {
+        font-size: 4vw;
+    }
+
+    .spotify-div h2 {
+        font-size: 5vw;
+    }
+
+    .MyPreviousDesigns h2 {
+        font-size: 8vw;
+        margin-bottom: 30px;
+    }
+
+    .contact h2 {
+        font-size: 8vw;
+    }
+
+    .contact p {
+        font-size: 6vw;
+    }
+
+    .socials {
+        gap: 20px 20%;
+    }
+    
+}
