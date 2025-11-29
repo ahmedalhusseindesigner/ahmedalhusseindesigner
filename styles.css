@@ -57,7 +57,7 @@ body {
 
 #hero {
     width: 100%;
-    background-image: url('./assets/hero.png');
+    background-image: url('./assets/hero.avif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -464,4 +464,5 @@ footer p {
         gap: 20px 20%;
     }
     
+
 }
