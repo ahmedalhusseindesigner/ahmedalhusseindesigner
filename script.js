@@ -1,5 +1,5 @@
 const img = new Image();
-img.src = 'assets/hero.png';
+img.src = 'assets/hero.avif';
 img.onload = function () {
   const ratio = img.height / img.width;
   const container = document.getElementById('hero');
@@ -37,6 +37,7 @@ function triggerAnimation() {
 }
 
 window.addEventListener('scroll', triggerAnimation);
+
 
 
 
